@@ -10,6 +10,9 @@ import org.w3c.dom.Document;
 public class $ {
 
     /** Initialized by bJVM */
+    public static native void init();
+
+    /** Initialized by bJVM */
     public static Document document;
 
     // Window APIs
