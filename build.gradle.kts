@@ -19,3 +19,7 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+tasks.compileJava {
+    options.compilerArgs = arrayListOf("-XDstringConcat=inline")
+}
