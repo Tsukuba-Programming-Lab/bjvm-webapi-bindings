@@ -163,14 +163,18 @@ public class HTMLInputElement extends HTMLElement implements org.w3c.dom.html.HT
 
     }
 
+    private native String getValue0();
+
     @Override
     public String getValue() {
-        return "";
+        return getValue0();
     }
+
+    private native void setValue0(String value);
 
     @Override
     public void setValue(String value) {
-
+        setValue0(value);
     }
 
     @Override

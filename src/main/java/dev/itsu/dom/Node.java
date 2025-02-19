@@ -146,9 +146,11 @@ public class Node extends EventTarget implements org.w3c.dom.Node {
         return "";
     }
 
+    private native void setTextContent0(String textContent);
+
     @Override
     public void setTextContent(String textContent) throws DOMException {
-
+        setTextContent0(textContent);
     }
 
     @Override

@@ -5,9 +5,6 @@ import dev.itsu.dom.Element;
 public class HTMLElement extends Element implements org.w3c.dom.html.HTMLElement {
     private String id;
 
-    /** This is for internal use only. */
-    private String uuid;
-
     @Override
     public String getId() {
         return id;
