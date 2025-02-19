@@ -30,67 +30,72 @@ public class HTMLTextareaElement extends HTMLElement implements org.w3c.dom.html
 
     @Override
     public int getCols() {
-        return 0;
+        var attribute = getAttribute("cols");
+        return attribute == null ? 20 : Integer.parseInt(attribute);
     }
 
     @Override
     public void setCols(int cols) {
-
+        setAttribute("cols", String.valueOf(cols));
     }
 
     @Override
     public boolean getDisabled() {
-        return false;
+        var attribute = getAttribute("disabled");
+        return attribute != null && attribute.equals("true");
     }
 
     @Override
     public void setDisabled(boolean disabled) {
-
+        setAttribute("disabled", String.valueOf(disabled));
     }
 
     @Override
     public String getName() {
-        return "";
+        return getAttribute("name");
     }
 
     @Override
     public void setName(String name) {
-
+        setAttribute("name", name);
     }
 
     @Override
     public boolean getReadOnly() {
-        return false;
+        var attribute = getAttribute("readonly");
+        return attribute != null && attribute.equals("true");
     }
 
     @Override
     public void setReadOnly(boolean readOnly) {
-
+        setAttribute("readonly", String.valueOf(readOnly));
     }
 
     @Override
     public int getRows() {
-        return 0;
+        var attribute = getAttribute("rows");
+        return attribute == null ? 2 : Integer.parseInt(attribute);
     }
 
     @Override
     public void setRows(int rows) {
-
+        setAttribute("rows", String.valueOf(rows));
     }
 
     @Override
     public int getTabIndex() {
-        return 0;
+        var attribute = getAttribute("tabindex");
+        return attribute == null ? 0 : Integer.parseInt(attribute);
     }
 
     @Override
     public void setTabIndex(int tabIndex) {
-
+        setAttribute("tabindex", String.valueOf(tabIndex));
     }
 
     @Override
     public String getType() {
-        return "";
+        return getAttribute("type");
     }
 
     private native String getValue0();

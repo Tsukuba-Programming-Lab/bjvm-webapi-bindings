@@ -20,46 +20,48 @@ public class HTMLButtonElement extends HTMLElement implements org.w3c.dom.html.H
 
     @Override
     public boolean getDisabled() {
-        return false;
+        var attribute = getAttribute("disabled");
+        return attribute != null && attribute.equals("true");
     }
 
     @Override
     public void setDisabled(boolean disabled) {
-
+        setAttribute("disabled", disabled ? "true" : "false");
     }
 
     @Override
     public String getName() {
-        return "";
+        return getAttribute("name");
     }
 
     @Override
     public void setName(String name) {
-
+        setAttribute("name", name);
     }
 
     @Override
     public int getTabIndex() {
-        return 0;
+        var attribute = getAttribute("tabindex");
+        return attribute == null ? 0 : Integer.parseInt(attribute);
     }
 
     @Override
     public void setTabIndex(int tabIndex) {
-
+        setAttribute("tabindex", String.valueOf(tabIndex));
     }
 
     @Override
     public String getType() {
-        return "";
+        return getAttribute("type");
     }
 
     @Override
     public String getValue() {
-        return "";
+        return getAttribute("value");
     }
 
     @Override
     public void setValue(String value) {
-
+        setAttribute("value", value);
     }
 }

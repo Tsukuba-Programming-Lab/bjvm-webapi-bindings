@@ -47,11 +47,11 @@ public class HTMLElement extends Element implements org.w3c.dom.html.HTMLElement
 
     @Override
     public String getClassName() {
-        return "";
+        return getAttribute("class");
     }
 
     @Override
     public void setClassName(String className) {
-
+        setAttribute("class", className);
     }
 }

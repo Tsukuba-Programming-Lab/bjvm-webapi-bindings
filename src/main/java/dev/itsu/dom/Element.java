@@ -6,24 +6,33 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.TypeInfo;
 
 public class Element extends dev.itsu.dom.Node implements org.w3c.dom.Element {
+
+    private native String getTagName0();
+
     @Override
     public String getTagName() {
-        return "";
+        return getTagName0();
     }
+
+    private native String getAttribute0(String name);
 
     @Override
     public String getAttribute(String name) {
-        return "";
+        return getAttribute0(name);
     }
+
+    private native void setAttribute0(String name, String value);
 
     @Override
     public void setAttribute(String name, String value) throws DOMException {
-
+        setAttribute0(name, value);
     }
+
+    private native void removeAttribute0(String name);
 
     @Override
     public void removeAttribute(String name) throws DOMException {
-
+        removeAttribute0(name);
     }
 
     @Override

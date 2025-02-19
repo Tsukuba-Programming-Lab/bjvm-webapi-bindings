@@ -30,12 +30,12 @@ public class HTMLInputElement extends HTMLElement implements org.w3c.dom.html.HT
 
     @Override
     public String getAccept() {
-        return "";
+        return getAttribute("accept");
     }
 
     @Override
     public void setAccept(String accept) {
-
+        setAttribute("accept", accept);
     }
 
     @Override
@@ -50,107 +50,112 @@ public class HTMLInputElement extends HTMLElement implements org.w3c.dom.html.HT
 
     @Override
     public String getAlign() {
-        return "";
+        return getAttribute("align");
     }
 
     @Override
     public void setAlign(String align) {
-
+        setAttribute("align", align);
     }
 
     @Override
     public String getAlt() {
-        return "";
+        return getAttribute("alt");
     }
 
     @Override
     public void setAlt(String alt) {
-
+        setAttribute("alt", alt);
     }
 
     @Override
     public boolean getChecked() {
-        return false;
+        var attribute = getAttribute("checked");
+        return attribute != null && attribute.equals("true");
     }
 
     @Override
     public void setChecked(boolean checked) {
-
+        setAttribute("checked", checked ? "true" : "false");
     }
 
     @Override
     public boolean getDisabled() {
-        return false;
+        var attribute = getAttribute("disabled");
+        return attribute != null && attribute.equals("true");
     }
 
     @Override
     public void setDisabled(boolean disabled) {
-
+        setAttribute("disabled", disabled ? "true" : "false");
     }
 
     @Override
     public int getMaxLength() {
-        return 0;
+        var attribute = getAttribute("maxlength");
+        return attribute == null ? 0 : Integer.parseInt(attribute);
     }
 
     @Override
     public void setMaxLength(int maxLength) {
-
+        setAttribute("maxlength", String.valueOf(maxLength));
     }
 
     @Override
     public String getName() {
-        return "";
+        return getAttribute("name");
     }
 
     @Override
     public void setName(String name) {
-
+        setAttribute("name", name);
     }
 
     @Override
     public boolean getReadOnly() {
-        return false;
+        var attribute = getAttribute("readonly");
+        return attribute != null && attribute.equals("true");
     }
 
     @Override
     public void setReadOnly(boolean readOnly) {
-
+        setAttribute("readonly", String.valueOf(readOnly));
     }
 
     @Override
     public String getSize() {
-        return "";
+        return getAttribute("size");
     }
 
     @Override
     public void setSize(String size) {
-
+        setAttribute("size", size);
     }
 
     @Override
     public String getSrc() {
-        return "";
+        return getAttribute("src");
     }
 
     @Override
     public void setSrc(String src) {
-
+        setAttribute("src", src);
     }
 
     @Override
     public int getTabIndex() {
-        return 0;
+        var attribute = getAttribute("tabindex");
+        return attribute == null ? 0 : Integer.parseInt(attribute);
     }
 
     @Override
     public void setTabIndex(int tabIndex) {
-
+        setAttribute("tabindex", String.valueOf(tabIndex));
     }
 
     @Override
     public String getType() {
-        return "";
+        return getAttribute("type");
     }
 
     @Override
