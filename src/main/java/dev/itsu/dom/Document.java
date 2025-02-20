@@ -20,9 +20,11 @@ public class Document extends dev.itsu.dom.Node implements org.w3c.dom.Document 
         return null;
     }
 
+    private native Element createElement0(String tagName);
+
     @Override
     public Element createElement(String tagName) throws DOMException {
-        return null;
+        return createElement0(tagName);
     }
 
     @Override
