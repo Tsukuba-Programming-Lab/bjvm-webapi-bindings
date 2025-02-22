@@ -1,6 +1,6 @@
 package dev.itsu.dom.html;
 
-public class HTMLImageElement extends HTMLElement implements org.w3c.dom.html.HTMLImageElement {
+public class HTMLImgElement extends HTMLElement implements org.w3c.dom.html.HTMLImageElement {
     @Override
     public String getLowSrc() {
         return "";
