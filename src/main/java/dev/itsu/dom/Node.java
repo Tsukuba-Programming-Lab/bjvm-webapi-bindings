@@ -81,9 +81,10 @@ public class Node extends EventTarget implements org.w3c.dom.Node {
         return null;
     }
 
+    private native org.w3c.dom.Node appendChild0(org.w3c.dom.Node newChild) throws DOMException;
     @Override
     public org.w3c.dom.Node appendChild(org.w3c.dom.Node newChild) throws DOMException {
-        return null;
+        return appendChild0(newChild);
     }
 
     @Override
