@@ -2,7 +2,7 @@ package dev.itsu.bjvm;
 
 import dev.itsu.bjvm.apis.fetch.requestinit.RequestInit;
 import dev.itsu.bjvm.apis.fetch.response.Response;
-import org.w3c.dom.Document;
+import dev.itsu.dom.Document;
 
 /**
  * Wrapper of Window object in Web API

@@ -27,6 +27,11 @@ public class Document extends dev.itsu.dom.Node implements org.w3c.dom.Document 
         return createElement0(tagName);
     }
 
+    @SuppressWarnings("unchecked")
+    public <T extends Element> T createElementG(String tagName) throws DOMException {
+        return (T) createElement0(tagName);
+    }
+
     @Override
     public DocumentFragment createDocumentFragment() {
         return null;
@@ -87,11 +92,16 @@ public class Document extends dev.itsu.dom.Node implements org.w3c.dom.Document 
         return null;
     }
 
-    private native Element getElementById0(String elementId);
+    private native <T extends Element> T getElementById0(String elementId);
 
     @Override
     public Element getElementById(String elementId) {
         return getElementById0(elementId);
+    }
+
+    @SuppressWarnings("unchecked")
+    public <T extends Element> T getElementByIdG(String elementId) {
+        return (T) getElementById0(elementId);
     }
 
     @Override
