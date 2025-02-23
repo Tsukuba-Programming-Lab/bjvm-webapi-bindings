@@ -1,4 +1,4 @@
-package dev.itsu.bjvm.apis.fetch.response;
+package dev.itsu.bjvm.apis.fetch;
 
 import lombok.Builder;
 import lombok.Data;
@@ -26,7 +26,7 @@ public class Response implements Cloneable {
 
     private String statusText;
 
-    private Type type;
+    private String type;
 
     private String url;
 

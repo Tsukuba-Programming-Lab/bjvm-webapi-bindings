@@ -1,7 +1,7 @@
 package dev.itsu.bjvm;
 
-import dev.itsu.bjvm.apis.fetch.requestinit.RequestInit;
-import dev.itsu.bjvm.apis.fetch.response.Response;
+import dev.itsu.bjvm.apis.fetch.RequestInit;
+import dev.itsu.bjvm.apis.fetch.Response;
 import dev.itsu.dom.Document;
 
 /**

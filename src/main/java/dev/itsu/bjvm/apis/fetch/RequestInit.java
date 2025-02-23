@@ -1,4 +1,4 @@
-package dev.itsu.bjvm.apis.fetch.requestinit;
+package dev.itsu.bjvm.apis.fetch;
 
 import lombok.Builder;
 import lombok.Data;
@@ -12,7 +12,7 @@ public class RequestInit {
     private String body;
 
     @Builder.Default
-    private RequestMethod method = RequestMethod.GET;
+    private String method = "GET";
 
     private HashMap<String, String> headers;
 
@@ -20,15 +20,15 @@ public class RequestInit {
     private boolean browsingTopics = false;
 
     @Builder.Default
-    private Mode mode = Mode.CORS;
+    private String mode = "cors";
 
     @Builder.Default()
-    private Credential credentials = Credential.SAME_ORIGIN;
+    private String credentials = "same-origin";
 
-    private Cache cache;
+    private String cache;
 
     @Builder.Default
-    private Redirect redirect = Redirect.FOLLOW;
+    private String redirect = "follow";
 
     @Builder.Default
     private String referrer = "about:client";
@@ -44,7 +44,7 @@ public class RequestInit {
     private String signal;
 
     @Builder.Default
-    private Priority priority = Priority.AUTO;
+    private String priority = "auto";
 
 }
 
