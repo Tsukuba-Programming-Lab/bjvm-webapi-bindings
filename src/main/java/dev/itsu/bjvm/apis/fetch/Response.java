@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.io.BufferedInputStream;
+import java.io.ByteArrayInputStream;
 import java.nio.ByteBuffer;
 import java.util.HashMap;
 
@@ -12,7 +13,9 @@ import java.util.HashMap;
 public class Response implements Cloneable {
 
     // TODO ReadableStream
-    private BufferedInputStream body;
+    private ByteArrayInputStream body;
+
+    private String _bodyText;
 
     private boolean bodyUsed;
 
@@ -54,11 +57,15 @@ public class Response implements Cloneable {
      */
     public native byte[] bytes();
 
-    public native BufferedInputStream bufferedInputStream();
+    public BufferedInputStream bufferedInputStream() {
+        return new BufferedInputStream(body);
+    }
 
     public native String text();
 
     public native String json();
+
+    public native <T> T json(Class<T> clazz);
 
     @Override
     public Response clone() {
