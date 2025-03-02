@@ -14,7 +14,8 @@ public class RequestInit {
     @Builder.Default
     private String method = "GET";
 
-    private HashMap<String, String> headers;
+    @Builder.Default
+    private HashMap<String, String> headers = new HashMap<>();
 
     @Builder.Default
     private boolean browsingTopics = false;

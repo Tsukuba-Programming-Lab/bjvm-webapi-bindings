@@ -46,7 +46,9 @@ public class $ {
     public static native boolean confirm(String message);
 
     // Fetch APIs
-    public static native Response fetch(String url);
+    public static Response fetch(String url) {
+        return fetch(url, RequestInit.builder().build());
+    }
 
     public static native Response fetch(String url, RequestInit options);
 
